@@ -9,5 +9,5 @@ import retrofit2.http.POST;
 
 public interface ApiEndpoint {
     @GET("member/list")
-    Call<String> listPerson();
+    Call<PersonListResponse> listPerson();
 }
