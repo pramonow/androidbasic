@@ -1,4 +1,4 @@
-package pramonow.com.android_howto.adapter;
+package pramonow.com.androidbasic.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.view.menu.MenuView;
@@ -11,10 +11,14 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import pramonow.com.android_howto.R;
-import pramonow.com.android_howto.model.Person;
-import pramonow.com.android_howto.util.AdapterClickCallback;
+import pramonow.com.androidbasic.R;
+import pramonow.com.androidbasic.model.Person;
+import pramonow.com.androidbasic.util.AdapterClickCallback;
 
+/*
+    Sample adapter to be used
+    Need person and callback
+ */
 public class SampleAdapter extends RecyclerView.Adapter<SampleAdapter.SampleVH> {
 
     List<Person> personList = new ArrayList<>();
@@ -35,8 +39,6 @@ public class SampleAdapter extends RecyclerView.Adapter<SampleAdapter.SampleVH> 
 
     @Override
     public void onBindViewHolder(@NonNull SampleVH sampleVH, int i) {
-
-        //do something with VH
         sampleVH.setViewHolder(personList.get(i), adapterClickCallback);
     }
 
@@ -67,6 +69,7 @@ public class SampleAdapter extends RecyclerView.Adapter<SampleAdapter.SampleVH> 
             number.setText(person.getId().toString());
             name.setText(person.getName());
 
+            //Set callback here to pass person data to our activity
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

@@ -1,4 +1,4 @@
-package pramonow.com.android_howto.activity;
+package pramonow.com.androidbasic.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import pramonow.com.android_howto.R;
+import pramonow.com.androidbasic.R;
 
+/*
+    Basic Activity, showing implement button
+
+    Using 2 different methods:
+    1. Using interface (For showing Toast)
+    2. Using Anonymous class (For navigation)
+
+ */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button buttonOne, buttonTwo, buttonNavigate;

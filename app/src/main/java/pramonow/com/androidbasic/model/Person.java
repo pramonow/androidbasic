@@ -1,4 +1,4 @@
-package pramonow.com.android_howto.model;
+package pramonow.com.androidbasic.model;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -1,9 +1,10 @@
-package pramonow.com.android_howto;
+package pramonow.com.androidbasic;
 
 import android.app.Application;
 
-import pramonow.com.android_howto.network.NetworkBuilder;
+import pramonow.com.androidbasic.network.NetworkBuilder;
 
+//Normal Application Example
 public class MainApplication extends Application {
 
     @Override

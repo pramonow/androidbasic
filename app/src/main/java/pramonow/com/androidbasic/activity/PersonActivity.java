@@ -1,4 +1,4 @@
-package pramonow.com.android_howto.activity;
+package pramonow.com.androidbasic.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,9 +7,11 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-import pramonow.com.android_howto.R;
+import pramonow.com.androidbasic.R;
 
-
+/*
+    Class example for getting intent data
+ */
 public class PersonActivity extends AppCompatActivity {
 
     TextView textView;

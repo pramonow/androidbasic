@@ -1,4 +1,4 @@
-package pramonow.com.android_howto.activity;
+package pramonow.com.androidbasic.activity;
 
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +9,14 @@ import android.widget.Toast;
 
 import java.lang.ref.WeakReference;
 
-import pramonow.com.android_howto.R;
+import pramonow.com.androidbasic.R;
+import pramonow.com.androidbasic.util.AsyncTaskClass;
+
+/*
+    Activity showing how to implement Async Task with 2 different methods:
+    1. With Inner class
+    2. With outer class
+ */
 
 public class AsyncTaskActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,10 +33,18 @@ public class AsyncTaskActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View view) {
+
+        //example on outer class
+        //AsyncTaskClass asyncTaskClass = new AsyncTaskClass();
+        //asyncTaskClass.execute();
+
         InnerAsyncTask innerAsyncTask = new InnerAsyncTask(this);
         innerAsyncTask.execute("params");
     }
 
+    /*
+        Inner async task class example
+     */
     private class InnerAsyncTask extends AsyncTask<String, Void, Integer> {
 
         private WeakReference<AsyncTaskActivity> activityReference;
@@ -49,14 +64,12 @@ public class AsyncTaskActivity extends AppCompatActivity implements View.OnClick
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
             return 3;
         }
 
         @Override
         protected void onPostExecute(Integer integer) {
             super.onPostExecute(integer);
-
             Toast.makeText(asyncTaskActivity,integer + " Seconds have passed", Toast.LENGTH_SHORT).show();
         }
 

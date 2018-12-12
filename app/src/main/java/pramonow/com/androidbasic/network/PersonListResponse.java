@@ -1,10 +1,10 @@
-package pramonow.com.android_howto.network;
+package pramonow.com.androidbasic.network;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import pramonow.com.android_howto.model.Person;
+import pramonow.com.androidbasic.model.Person;
 
 public class PersonListResponse {
 

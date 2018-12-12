@@ -1,4 +1,4 @@
-package pramonow.com.android_howto.util;
+package pramonow.com.androidbasic.util;
 
 import android.os.AsyncTask;
 

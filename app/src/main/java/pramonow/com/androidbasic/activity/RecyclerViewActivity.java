@@ -1,4 +1,4 @@
-package pramonow.com.android_howto.activity;
+package pramonow.com.androidbasic.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -13,16 +13,20 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import pramonow.com.android_howto.R;
-import pramonow.com.android_howto.adapter.SampleAdapter;
-import pramonow.com.android_howto.model.Person;
-import pramonow.com.android_howto.network.NetworkBuilder;
-import pramonow.com.android_howto.network.PersonListResponse;
-import pramonow.com.android_howto.util.AdapterClickCallback;
+import pramonow.com.androidbasic.R;
+import pramonow.com.androidbasic.adapter.SampleAdapter;
+import pramonow.com.androidbasic.model.Person;
+import pramonow.com.androidbasic.network.NetworkBuilder;
+import pramonow.com.androidbasic.network.PersonListResponse;
+import pramonow.com.androidbasic.util.AdapterClickCallback;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/*
+    Example on making recycler view (list)
+    Uncomment the call for trying API call
+ */
 public class RecyclerViewActivity extends AppCompatActivity implements View.OnClickListener, AdapterClickCallback {
 
     RecyclerView recyclerView;
@@ -42,6 +46,8 @@ public class RecyclerViewActivity extends AppCompatActivity implements View.OnCl
         recyclerView.setLayoutManager(linearLayoutManager);
 
         sampleAdapter = new SampleAdapter();
+
+        //Set callback for clicking
         sampleAdapter.setAdapterClickCallback(this);
         recyclerView.setAdapter(sampleAdapter);
 

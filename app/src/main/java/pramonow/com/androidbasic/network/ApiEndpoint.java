@@ -1,4 +1,4 @@
-package pramonow.com.android_howto.network;
+package pramonow.com.androidbasic.network;
 
 import java.util.List;
 

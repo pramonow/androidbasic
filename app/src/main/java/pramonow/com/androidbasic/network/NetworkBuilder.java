@@ -1,18 +1,20 @@
-package pramonow.com.android_howto.network;
+package pramonow.com.androidbasic.network;
 
 import android.util.Log;
 
-import pramonow.com.android_howto.BuildConfig;
+import pramonow.com.androidbasic.BuildConfig;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+/*
+    Class for making network
+ */
 
 public class NetworkBuilder {
 
     public static ApiEndpoint service;
 
     public static void initializeNetwork(){
-
-        Log.d("baniman", "initializeNetwork: ");
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BuildConfig.BASE_URL)

@@ -1,6 +1,6 @@
-package pramonow.com.android_howto.util;
+package pramonow.com.androidbasic.util;
 
-import pramonow.com.android_howto.model.Person;
+import pramonow.com.androidbasic.model.Person;
 
 public interface AdapterClickCallback {
 
