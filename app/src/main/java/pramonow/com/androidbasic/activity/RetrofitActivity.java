@@ -39,7 +39,6 @@ public class RetrofitActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
 
         Call<PersonListResponse> call = NetworkBuilder.service.listPerson();
-        //String result = call.execute().body();
 
         //Calling network here
         call.enqueue(new Callback<PersonListResponse>() {

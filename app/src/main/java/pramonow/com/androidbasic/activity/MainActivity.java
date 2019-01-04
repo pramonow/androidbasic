@@ -45,12 +45,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        if(view == buttonOne)
-        {
+        if(view == buttonOne) {
             Toast.makeText(this,"Button one pressed", Toast.LENGTH_SHORT).show();
         }
-        else if(view == buttonTwo)
-        {
+        else if(view == buttonTwo) {
             Toast.makeText(this,"Button two pressed", Toast.LENGTH_SHORT).show();
         }
     }

@@ -56,35 +56,45 @@ public class RecyclerViewActivity extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View view) {
 
+        //Block for making recycler view without API call
+        //Made dummy data to show person added
         Person person = new Person();
         person.setId(1L);
         person.setName("Nama 1");
         person.setRole(1);
 
         List<Person> personList = new ArrayList<>();
+
+        //Added dummy data twice
+        personList.add(person);
         personList.add(person);
 
         sampleAdapter.setPersonList(personList);
+
+        //Notify so the view will change
         sampleAdapter.notifyDataSetChanged();
+        //End of block
+
+        //Starting from here is recycler view with API calling
 
         /*Call<PersonListResponse> call = NetworkBuilder.service.listPerson();
-        //String result = call.execute().body();
 
         call.enqueue(new Callback<PersonListResponse>() {
             @Override
             public void onResponse(Call<PersonListResponse> call, Response<PersonListResponse> response) {
                 //Success
-
                 PersonListResponse result = response.body();
+
+                //Parse the result
                 List<Person> personList = result.getResult();
 
+                //Add it into list
                 sampleAdapter.setPersonList(personList);
                 sampleAdapter.notifyDataSetChanged();
             }
 
             @Override
             public void onFailure(Call<PersonListResponse> call, Throwable t) {
-                Log.d("baniman", "fail " + t.getMessage());
                 //Fail
             }
         });*/
