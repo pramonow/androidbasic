@@ -18,14 +18,15 @@
         </activity>
         <activity android:name=".activity.NavigatedActivity" />
         <activity android:name=".activity.AsyncTaskActivity" />
-        <activity android:name=".activity.RecyclerViewActivity">            <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+        <activity android:name=".activity.RecyclerViewActivity">            </activity>
         <activity android:name=".activity.RetrofitActivity" />
         <activity android:name=".activity.PersonActivity" />
         <activity android:name=".activity.ViewPagerActivity">
         </activity>
+        <activity android:name=".activity.VolleyActivity"><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
     </application>
 
 </manifest>
