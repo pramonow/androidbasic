@@ -60,6 +60,7 @@ public class AsyncTaskActivity extends AppCompatActivity implements View.OnClick
         protected Integer doInBackground(String... params) {
 
             try {
+                //putting sleep here to simulate a task
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();

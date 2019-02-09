@@ -54,8 +54,8 @@ public class RetrofitActivity extends AppCompatActivity implements View.OnClickL
 
             @Override
             public void onFailure(Call<PersonListResponse> call, Throwable t) {
-                Log.d("TAG HERE", "fail " + t.getMessage());
-            }
+                Toast.makeText(RetrofitActivity.this,"Fail",Toast.LENGTH_SHORT).show();
+                Log.d("TAG HERE", "fail " + t.getMessage()); }
         });
     }
 }

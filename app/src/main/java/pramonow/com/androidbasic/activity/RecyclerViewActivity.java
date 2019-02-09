@@ -100,10 +100,13 @@ public class RecyclerViewActivity extends AppCompatActivity implements View.OnCl
         });*/
     }
 
+    /*
+        We will use this as callback in our adapter
+     */
     @Override
     public void onAdapterClick(Person person) {
         Intent intent = new Intent(this,PersonActivity.class);
-        intent.putExtra("nama",person.getName());
+        intent.putExtra("name",person.getName());
         startActivity(intent);
     }
 }

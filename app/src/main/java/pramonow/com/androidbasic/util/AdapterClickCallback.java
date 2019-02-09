@@ -2,7 +2,7 @@ package pramonow.com.androidbasic.util;
 
 import pramonow.com.androidbasic.model.Person;
 
+//Interface used to pass in data from adapter to new activity
 public interface AdapterClickCallback {
-
-    public void onAdapterClick(Person person);
+    void onAdapterClick(Person person);
 }

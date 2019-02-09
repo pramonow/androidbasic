@@ -15,6 +15,9 @@ import com.android.volley.toolbox.Volley;
 
 import pramonow.com.androidbasic.R;
 
+/*
+    Example on volley network call
+ */
 public class VolleyActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button callButton;

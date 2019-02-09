@@ -22,7 +22,7 @@ public class PersonActivity extends AppCompatActivity {
         setContentView(R.layout.activity_person);
         textView = findViewById(R.id.name);
 
-        String name = getIntent().getStringExtra("nama");
+        String name = getIntent().getStringExtra("name");
         textView.setText(name);
     }
 }

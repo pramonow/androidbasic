@@ -1,7 +1,6 @@
 package pramonow.com.androidbasic.adapter;
 
 import android.support.annotation.NonNull;
-import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +23,7 @@ public class SampleAdapter extends RecyclerView.Adapter<SampleAdapter.SampleVH> 
     List<Person> personList = new ArrayList<>();
     AdapterClickCallback adapterClickCallback;
 
+    //Callback is obtained from activity that uses this
     public void setAdapterClickCallback(AdapterClickCallback adapterClickCallback)
     {
         this.adapterClickCallback = adapterClickCallback;
